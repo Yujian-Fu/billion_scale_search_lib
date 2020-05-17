@@ -1,0 +1,96 @@
+Start testing: May 14 05:33 PST
+----------------------------------------------------------
+1/5 Testing: TutorialRuns
+1/5 Test: TutorialRuns
+Command: "/home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice/Tutorial" "25"
+Directory: /home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice
+"TutorialRuns" start time: May 14 05:33 PST
+Output:
+----------------------------------------------------------
+This is mysqrt
+The square root of 25 is 5
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TutorialRuns" end time: May 14 05:33 PST
+"TutorialRuns" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: TutorialComp25
+2/5 Test: TutorialComp25
+Command: "/home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice/Tutorial" "25"
+Directory: /home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice
+"TutorialComp25" start time: May 14 05:33 PST
+Output:
+----------------------------------------------------------
+This is mysqrt
+The square root of 25 is 5
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[25 is 5
+]
+"TutorialComp25" end time: May 14 05:33 PST
+"TutorialComp25" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: TutorialNegative
+3/5 Test: TutorialNegative
+Command: "/home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice/Tutorial" "-25"
+Directory: /home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice
+"TutorialNegative" start time: May 14 05:33 PST
+Output:
+----------------------------------------------------------
+This is mysqrt
+The square root of -25 is -nan
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Fail Reason:
+Required regular expression not found.Regex=[-25 is 0
+]
+"TutorialNegative" end time: May 14 05:33 PST
+"TutorialNegative" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: TutorialSmall
+4/5 Test: TutorialSmall
+Command: "/home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice/Tutorial" "0.0001"
+Directory: /home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice
+"TutorialSmall" start time: May 14 05:33 PST
+Output:
+----------------------------------------------------------
+This is mysqrt
+The square root of 0.0001 is 0.01
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[0.0001 is 0.01
+]
+"TutorialSmall" end time: May 14 05:33 PST
+"TutorialSmall" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: TutorialUsage
+5/5 Test: TutorialUsage
+Command: "/home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice/Tutorial"
+Directory: /home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice
+"TutorialUsage" start time: May 14 05:33 PST
+Output:
+----------------------------------------------------------
+/home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice/Tutorial Version 1.0
+Usage: /home/yujian/Desktop/Repository/billion_scale_search_lib/cmake_practice/Tutorial number
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found.Regex=[Usage:.*number
+]
+"TutorialUsage" end time: May 14 05:33 PST
+"TutorialUsage" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 14 05:33 PST
