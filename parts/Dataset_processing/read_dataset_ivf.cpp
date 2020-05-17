@@ -45,7 +45,7 @@ void readXvec(std::ifstream & in, T *data, const size_t dimension, const size_t 
         }
         in.read((char *) (data + i * dim), dim*sizeof(T));
     }
-    //PrintVector(data, dimension, num_vector);
+    PrintVector(data, dimension, num_vector);
     in.close();
 }
 
