@@ -86,9 +86,9 @@ void readXvecFvec(const char* path, float *data, const size_t dimension, const s
 
 
 int main(){
-    const char *path = "/home/yujian/Downloads/similarity_search_datasets/ANN_SIFT1M/sift_base.fvecs";
+    const char *path = "/home/y/yujianfu/ivf-hnsw/data/SIFT1B/bigann_learn.bvecs";
     std::ifstream in(path, std::ios::binary);
-    size_t num_vector = 1000000;
+    size_t num_vector = 100000000;
     size_t dimension = 128;
     std::vector<idx_t> massQA(num_vector * dimension);
 
@@ -98,6 +98,7 @@ int main(){
     std::ios::pos_type ss = in.tellg();
     size_t fsize = (size_t) ss;    
     num_vector = (unsigned) (fsize / (dimension + 1) / sizeof(uint32_t));
+    std::cout << "Print the num " << std::endl;
     in.seekg(0, std::ios::beg);
     //****************
     // Testing read file from ive-hnsw
