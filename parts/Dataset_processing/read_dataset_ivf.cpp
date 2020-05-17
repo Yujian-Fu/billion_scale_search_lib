@@ -29,7 +29,7 @@ void PrintVector(T *data, const size_t dimension, const size_t num_vector){
 
 
 template<typename T>
-void readXvec(const char* path, T *data, const size_t dimension, const size_t num_vector = 1){
+void readXvec(std::ifstream & in, T *data, const size_t dimension, const size_t num_vector = 1){
     size_t dim = dimension;
     //in.read((char *) &dim, sizeof(uint32_t));
     //std::cout << "Print the dim " << dim << std::endl;
@@ -102,17 +102,18 @@ int main(){
 
     
     std::vector<idx_t> massQA(num_vector * dimension);
-    in.close();
+    
     std::cout << "Print the fsize " << fsize << std::endl;
     std::cout << "Print the num " << num_vector <<  std::endl;
     //****************
     // Testing read file from ive-hnsw
     //****************
-    readXvec<idx_t>(path, massQA.data(), dimension, num_vector);
+    readXvec<idx_t>(in, massQA.data(), dimension, num_vector);
 
 
     //std::vector<float> massTrain(num_vector * dimension);
     //readXvecFvec<idx_t>(path, massTrain.data(), dimension, num_vector);
+    in.close();
 
     
 }
