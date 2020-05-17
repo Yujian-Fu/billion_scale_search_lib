@@ -9,7 +9,7 @@ template<typename T>
 void PrintVector(T *data, const size_t dimension, const size_t num_vector){
     for (size_t i= 0; i < 10 * dimension; i++)
     {
-        std::cout << (T)data[i];
+        std::cout << (float)data[i];
         if (!i)
         {
             std::cout << " ";
@@ -45,7 +45,7 @@ void readXvec(std::ifstream & in, T *data, const size_t dimension, const size_t 
         }
         in.read((char *) (data + i * dim), dim*sizeof(T));
     }
-    PrintVector(data, dimension, num_vector);
+    //PrintVector(data, dimension, num_vector);
     in.close();
 }
 
