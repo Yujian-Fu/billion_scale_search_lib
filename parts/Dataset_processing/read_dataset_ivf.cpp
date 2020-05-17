@@ -35,7 +35,6 @@ void readXvec(std::ifstream & in, T *data, const size_t dimension, const size_t 
     //std::cout << "Print the dim " << dim << std::endl;
     
     std::cout << "In ReadXvec function" << std::endl;
-    std::ifstream in(path, std::ios::binary);
     std::cout << "The type size is " << sizeof(T) << std::endl;
     std::cout << "The file is pointing to " << (size_t) in.tellg() << std::endl;
     for (size_t i = 0; i < 1000; i++){
