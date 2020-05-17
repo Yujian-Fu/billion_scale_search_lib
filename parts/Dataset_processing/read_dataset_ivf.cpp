@@ -87,7 +87,7 @@ void readXvecFvec(const char* path, float *data, const size_t dimension, const s
 
 int main(){
     std::cout <<"Reading dataset file" << std::endl;
-    const char *path = "/home/y/yujianfu/ivf-hnsw/data/SIFT1B/bigann_learn.bvecs";
+    const char *path = "/home/y/yujianfu/ivf-hnsw/data/SIFT1B/bigann_base.bvecs";
     std::ifstream in(path, std::ios::binary);
     size_t num_vector = 100000000;
     size_t dimension = 128;
