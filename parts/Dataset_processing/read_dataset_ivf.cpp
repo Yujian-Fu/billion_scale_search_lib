@@ -98,7 +98,7 @@ int main(){
     std::ios::pos_type ss = in.tellg();
     size_t fsize = (size_t) ss;    
     num_vector = (unsigned) (fsize / (dimension + 1) / sizeof(uint32_t));
-    std::cout << "Print the num " << std::endl;
+    std::cout << "Print the num " << num_vector <<  std::endl;
     
     std::vector<idx_t> massQA(num_vector * dimension);
     in.seekg(0, std::ios::beg);
