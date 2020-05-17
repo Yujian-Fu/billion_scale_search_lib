@@ -100,7 +100,7 @@ int main(){
     num_vector = (unsigned) (fsize / (dimension + 4) / sizeof(uint8_t));
 
     
-    std::vector<idx_t> massQA(num_vector * dimension);
+    std::vector<idx_t> massQA(1000 * dimension);
     
     std::cout << "Print the fsize " << fsize << std::endl;
     std::cout << "Print the num " << num_vector <<  std::endl;
