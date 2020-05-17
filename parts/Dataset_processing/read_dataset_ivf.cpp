@@ -99,11 +99,12 @@ int main(){
     std::ios::pos_type ss = in.tellg();
     size_t fsize = (size_t) ss;    
     num_vector = (unsigned) (fsize / (dimension + 4) / sizeof(uint8_t));
-    std::cout << "Print the fsize " << fsize << std::endl;
-    std::cout << "Print the num " << num_vector <<  std::endl;
+
     
     std::vector<idx_t> massQA(num_vector * dimension);
     in.close();
+    std::cout << "Print the fsize " << fsize << std::endl;
+    std::cout << "Print the num " << num_vector <<  std::endl;
     //****************
     // Testing read file from ive-hnsw
     //****************
