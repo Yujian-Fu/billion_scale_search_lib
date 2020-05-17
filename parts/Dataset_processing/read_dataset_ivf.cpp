@@ -34,6 +34,7 @@ void readXvec(const char* path, T *data, const size_t dimension, const size_t nu
     //in.read((char *) &dim, sizeof(uint32_t));
     //std::cout << "Print the dim " << dim << std::endl;
     
+    std::cout << "In ReadXvec function" << std::endl;
     std::ifstream in(path, std::ios::binary);
     std::cout << "The type size is " << sizeof(T) << std::endl;
     std::cout << "The file is pointing to " << (size_t) in.tellg() << std::endl;
@@ -102,7 +103,7 @@ int main(){
     std::cout << "Print the num " << num_vector <<  std::endl;
     
     std::vector<idx_t> massQA(num_vector * dimension);
-    in.seekg(0, std::ios::beg);
+    in.close();
     //****************
     // Testing read file from ive-hnsw
     //****************
@@ -111,6 +112,6 @@ int main(){
 
     //std::vector<float> massTrain(num_vector * dimension);
     //readXvecFvec<idx_t>(path, massTrain.data(), dimension, num_vector);
-    in.close();
+
     
 }
