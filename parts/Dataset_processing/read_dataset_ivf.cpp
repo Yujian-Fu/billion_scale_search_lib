@@ -96,7 +96,8 @@ int main(){
     std::cout << "Print the dim " << dimension << std::endl;
     in.seekg(0, std::ios::end);
     std::ios::pos_type ss = in.tellg();
-    size_t fsize = (size_t) ss;    
+    size_t fsize = (size_t) ss;
+    in.seekg(0, std::ios::beg);    
     num_vector = (unsigned) (fsize / (dimension + 4) / sizeof(uint8_t));
 
     
