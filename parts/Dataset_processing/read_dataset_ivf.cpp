@@ -92,12 +92,12 @@ int main(){
     size_t num_vector = 100000000;
     size_t dimension = 128;
 
-    in.read((char *) &dimension, sizeof(uint16_t));
+    in.read((char *) &dimension, sizeof(uint32_t));
     std::cout << "Print the dim " << dimension << std::endl;
     in.seekg(0, std::ios::end);
     std::ios::pos_type ss = in.tellg();
     size_t fsize = (size_t) ss;    
-    num_vector = (unsigned) (fsize / (dimension + 1) / sizeof(uint8_t));
+    num_vector = (unsigned) (fsize / (dimension + 4) / sizeof(uint8_t));
     std::cout << "Print the fsize " << fsize << std::endl;
     std::cout << "Print the num " << num_vector <<  std::endl;
     
